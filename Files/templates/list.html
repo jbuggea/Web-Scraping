@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Object</td>
+            <td>Image</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Object"]}}</td>
+               <td><img src="{{ url_for('static', filename='images/') }}{{ row["ImageRef"] }}" alt={{ "no_image" }} width="120" height="90" /></td>
+            </tr>
+         {% endfor %}
+      </table>      
+   </body>
+</html>

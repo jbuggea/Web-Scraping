@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+    </style>
+    <title>Finds Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  </head>
+  <body style="background-color: lightblue;">
+  <center>
+  <h1>Data</h1>
+     <div class="container">
+      <p>Finds Database</p>
+      <p>Objects</p>
+      <p>1-10</p>
+      <ul>
+		{% for row in rows %}
+            <tr>
+            <p>
+               <td>{{row["Object"]}}</td>
+               </p>
+               <p>
+      			<img src="{{ url_for('static', filename='images/') }}{{ row["ImageRef"] }}" alt={{ "no_image" }} width="120" height="90" />
+   			   </p>
+   			</tr>
+   	
+    	{% endfor %}
+      </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    </center>
+  </body>
+</html>
+
